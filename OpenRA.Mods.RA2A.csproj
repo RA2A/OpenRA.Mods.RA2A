@@ -21,8 +21,8 @@
     <OutputPath>bin\Debug\</OutputPath>
     <CustomCommands>
       <CustomCommands>
-        <Command type="AfterBuild" command="cp ${TargetFile} ../../mods" workingdir="${ProjectDir}" />
-        <Command type="AfterBuild" command="cp ${TargetFile}.mdb ../../mods" workingdir="${ProjectDir}" />
+        <Command type="AfterBuild" command="cp ${TargetFile} .." workingdir="${ProjectDir}" />
+        <Command type="AfterBuild" command="cp ${TargetFile}.mdb .." workingdir="${ProjectDir}" />
       </CustomCommands>
     </CustomCommands>
   </PropertyGroup>
@@ -35,8 +35,8 @@
     <OutputPath>bin\Release\</OutputPath>
     <CustomCommands>
       <CustomCommands>
-        <Command type="AfterBuild" command="cp ${TargetFile} ../../mods" workingdir="${ProjectDir}" />
-        <Command type="AfterBuild" command="cp ${TargetFile}.mdb ../mods" workingdir="${ProjectDir}" />
+        <Command type="AfterBuild" command="cp ${TargetFile} .." workingdir="${ProjectDir}" />
+        <Command type="AfterBuild" command="cp ${TargetFile}.mdb .." workingdir="${ProjectDir}" />
       </CustomCommands>
     </CustomCommands>
   </PropertyGroup>
