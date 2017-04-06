@@ -48,29 +48,37 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
-    <ProjectReference Include="..\OpenRA.Game\OpenRA.Game.csproj">
-      <Project>{0DFB103F-2962-400F-8C6D-E2C28CCBA633}</Project>
-      <Name>OpenRA.Game</Name>
-      <Private>False</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\OpenRA.Mods.Cnc\OpenRA.Mods.Cnc.csproj">
-      <Project>{2881135d-4d62-493e-8f83-5eee92ccc6be}</Project>
-      <Name>OpenRA.Mods.Cnc</Name>
-      <Private>False</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\OpenRA.Mods.Common\OpenRA.Mods.Common.csproj">
-      <Project>{FE6C8CC0-2F07-442A-B29F-17617B3B7FC6}</Project>
-      <Name>OpenRA.Mods.Common</Name>
-      <Private>False</Private>
-    </ProjectReference>
     <Reference Include="Eluant">
-      <HintPath>..\thirdparty\download\Eluant.dll</HintPath>
-      <Private>False</Private>
+      <HintPath>..\..\..\engine\thirdparty\download\Eluant.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
+    <ProjectReference Include="..\..\..\engine\OpenRA.Game\OpenRA.Game.csproj">
+      <Project>{0DFB103F-2962-400F-8C6D-E2C28CCBA633}</Project>
+      <Name>OpenRA.Game</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\engine\OpenRA.Mods.Cnc\OpenRA.Mods.Cnc.csproj">
+      <Project>{2881135D-4D62-493E-8F83-5EEE92CCC6BE}</Project>
+      <Name>OpenRA.Mods.Cnc</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\engine\OpenRA.Mods.Common\OpenRA.Mods.Common.csproj">
+      <Project>{FE6C8CC0-2F07-442A-B29F-17617B3B7FC6}</Project>
+      <Name>OpenRA.Mods.Common</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\as\OpenRA.Mods.AS\OpenRA.Mods.AS.csproj">
+      <Project>{6DEEE499-98E5-4977-AAAE-CEAE165F17CF}</Project>
+      <Name>OpenRA.Mods.AS</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\yupgi_alert\OpenRA.Mods.yupgi_alert\OpenRA.Mods.yupgi_alert.csproj">
+      <Project>{5B9AB03E-2B8D-4F03-A127-0E9B62E02689}</Project>
+      <Name>OpenRA.Mods.yupgi_alert</Name>
+    </ProjectReference>
+    <Reference Include="System.Drawing" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -78,5 +86,6 @@
     <Compile Include="Traits\ChronoResourceDelivery.cs" />
     <Compile Include="Traits\Render\WithExitOverlay.cs" />
     <Compile Include="Traits\Render\WithSwimSuit.cs" />
+    <Compile Include="LoadScreens\RA2ALoadScreen.cs" />
   </ItemGroup>
 </Project>
