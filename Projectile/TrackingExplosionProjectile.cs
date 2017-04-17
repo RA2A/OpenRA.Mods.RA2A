@@ -100,7 +100,7 @@ namespace OpenRA.Mods.RA2A.Projectile
 					if (args.GuidedTarget.IsValidFor(args.SourceActor) && args.GuidedTarget.Type == TargetType.Actor)
 						world.AddFrameEndTask(w => w.Add(new TrackingImage(args.GuidedTarget.CenterPosition, args.GuidedTarget.Actor, localoffset, world, trackingimage, explosion, trackingimagepalette, false, scaleSizeWithZoom)));
 					else
-						world.AddFrameEndTask(w => w.Add(new TrackingImage(args.PassiveTarget., null, localoffset, world, trackingimage, explosion, trackingimagepalette, false, scaleSizeWithZoom)));
+						world.AddFrameEndTask(w => w.Add(new TrackingImage(args.PassiveTarget, null, localoffset, world, trackingimage, explosion, trackingimagepalette, false, scaleSizeWithZoom)));
 					imagealreadyexists = true;
 				}
 			}
