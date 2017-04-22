@@ -65,8 +65,6 @@ namespace OpenRA.Mods.RA2A.Projectile
 		string[] explosions = new string[0];
 		int delay;
 		WVec localoffset;
-		readonly Animation anim;
-		float scale;
 		bool scaleSizeWithZoom;
 		bool imagealreadyexists = false;
 
@@ -78,10 +76,8 @@ namespace OpenRA.Mods.RA2A.Projectile
 			explosions = info.Explosions;
 			delay = info.Delay;
 			localoffset = info.LocalOffset;
-			scale = info.Scale;
 			scaleSizeWithZoom = info.ScaleSizeWithZoom;
 			imagealreadyexists = false;
-			anim = new Animation(args.SourceActor.World, trackingimage, () => 0);
 		}
 
 		public void Tick(World world)
