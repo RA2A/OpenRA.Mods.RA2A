@@ -47,21 +47,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
-    <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\x86\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
-    <DebugType>Full</DebugType>
     <PlatformTarget>x86</PlatformTarget>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <OutputPath>bin\x86\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>None</DebugType>
     <PlatformTarget>x86</PlatformTarget>
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
@@ -87,22 +82,21 @@
       <Name>OpenRA.Mods.Common</Name>
       <Private>False</Private>
     </ProjectReference>
-    <ProjectReference Include="..\..\as\OpenRA.Mods.AS\OpenRA.Mods.AS.csproj">
+    <Reference Include="System.Drawing" />
+    <ProjectReference Include="..\..\..\engine\OpenRA.Mods.AS\OpenRA.Mods.AS.csproj">
       <Project>{6DEEE499-98E5-4977-AAAE-CEAE165F17CF}</Project>
       <Name>OpenRA.Mods.AS</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\yupgi_alert\OpenRA.Mods.yupgi_alert\OpenRA.Mods.yupgi_alert.csproj">
+    <ProjectReference Include="..\..\..\engine\OpenRA.Mods.yupgi_alert\OpenRA.Mods.yupgi_alert.csproj">
       <Project>{5B9AB03E-2B8D-4F03-A127-0E9B62E02689}</Project>
       <Name>OpenRA.Mods.yupgi_alert</Name>
     </ProjectReference>
-    <Reference Include="System.Drawing" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
     <Compile Include="Activities\ChronoResourceTeleport.cs" />
     <Compile Include="Effects\TrackingImage.cs" />
     <Compile Include="Projectile\TrackingExplosionProjectile.cs" />
-    <Compile Include="Traits\ChronoResourceDelivery.cs" />
     <Compile Include="Traits\Render\WithExitOverlay.cs" />
     <Compile Include="Traits\Render\WithSwimSuit.cs" />
     <Compile Include="LoadScreens\RA2ALoadScreen.cs" />
